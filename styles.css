@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 60rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container > * + * {
+  margin-top: 1em;
+}
+
+.section,
+[class*="section:"] {
+  height: 100vh;
+}
+
+.section\:primary {
+  background: rgb(221, 81, 0);
+  color: #fff;
+}
+
+.section\:secondary {
+  background: rgb(0, 114, 221);
+  color: #fff;
+}
+
+.section\:light {
+  background: #f2f2f2;
+  color: #333;
+}
+
+.section\:dark {
+  background: #111;
+  color: #f2f2f2;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero .title {
+  font-size: 5rem;
+  line-height: 1.25;
+}
+
+.title\:small {
+  font-size: 2.5rem;
+}
+
+.quote {
+  position: relative;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+.quote > * {
+  position: relative;
+}
+
+.quote::before {
+  content: "“";
+  font-size: 30rem;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -37%);
+  z-index: 0;
+}
+
+.figure {
+  width: 100%;
+  height: 100vh;
+  background: #f2f2f2;
+}
+
+.figure.half {
+  height: 50vh;
+}
+
+.figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.list {
+  list-style: inside;
+  font-size: 1.25rem;
+  font-family: Georgia, serif;
+}
+
+.text\:center {
+  text-align: center;
+}
